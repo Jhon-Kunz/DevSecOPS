@@ -51,8 +51,8 @@
           },
           {
             "position": {
-              "x": -622.0000000000047,
-              "y": -315
+              "x": -647.0000000000047,
+              "y": -299.99999999999966
             },
             "size": {
               "width": 890,
@@ -1313,17 +1313,7 @@
                 "x": 290,
                 "y": -200
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "position": {
@@ -1577,7 +1567,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1598,12 +1589,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "c62bd48e-ff3e-4f76-a663-0933d44385e8",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "ec5451fa-68cb-402b-b1ec-e7541d1e047b"
               ]
@@ -1751,6 +1756,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "April Rustianto M.Kom",
-    "threatTop": 8
+    "threatTop": 9
   }
 }
