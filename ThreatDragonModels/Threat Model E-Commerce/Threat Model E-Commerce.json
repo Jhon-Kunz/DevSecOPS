@@ -78,14 +78,15 @@
                 "4c9f86fb-9833-4a22-9096-21ed374f8cf9",
                 "e413d02d-dfb9-4296-b09c-497c36cebac9",
                 "727456f0-ec7d-4c55-b5dc-11001cb6c6c5",
-                "ce4ef3c6-6bcd-48ad-9c74-1819e5ab7176",
+                "3db1e16a-e993-475b-935a-e9029a4e9356",
+                "b11a5e76-d354-4cc5-a8d0-723ff8e322f1",
                 "26eeb843-6f89-41f7-9768-b789d803e987"
               ],
               "containedElements": [
                 "20d439cf-6e13-4488-8803-81049600e6ce",
                 "83a84c87-0f38-41fc-9747-0b9b14bebd9c",
                 "02a5811c-c710-434b-9f74-336fd86c88e1",
-                "69313df4-ebc7-4fb7-b39c-2e6ffaec012a"
+                "36d9e29d-8cb3-4fcf-82ac-9f60ece05bce"
               ]
             }
           },
@@ -783,133 +784,6 @@
             }
           },
           {
-            "position": {
-              "x": -200,
-              "y": 60
-            },
-            "size": {
-              "width": 140,
-              "height": 110
-            },
-            "attrs": {
-              "text": {
-                "text": "Payment\nGateaway"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 6,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "d9e53009-b955-4675-91e0-066152f527f2"
-                },
-                {
-                  "group": "right",
-                  "id": "f74777ad-e3ab-4b20-8364-9eb784d9298b"
-                },
-                {
-                  "group": "bottom",
-                  "id": "b0c4ba98-9a98-465d-8ee7-2fb8f29f5c6f"
-                },
-                {
-                  "group": "left",
-                  "id": "645070a8-7640-4ca9-afa1-090d6fa4e82e"
-                }
-              ]
-            },
-            "id": "69313df4-ebc7-4fb7-b39c-2e6ffaec012a",
-            "data": {
-              "type": "tm.Process",
-              "name": "Payment\nGateaway",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "handlesCardPayment": false,
-              "handlesGoodsOrServices": false,
-              "isWebApplication": false,
-              "privilegeLevel": "",
-              "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
-            }
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -1450,6 +1324,11 @@
                 "button-remove",
                 "vertices",
                 "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
                 "target-arrowhead"
               ],
               "name": null
@@ -1498,47 +1377,43 @@
               "protocol": "",
               "threats": [
                 {
-                  "id": "80086091-dd05-40fb-a5ad-2dd2e931a336",
-                  "title": "New STRIDE threat",
+                  "id": "cce09a84-ee95-4074-a78e-3da2cec76685",
+                  "title": "Signature Forgery",
                   "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "Kebocoran data pembayaran pemesanan User",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Penyerang memalsukan status payment untuk meloloskan pemesanan",
+                  "mitigation": "Validasi secret key di setiap payment dan hanya terima request dari IP Payment Gateway",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 3,
-                  "score": ""
+                  "number": 14,
+                  "score": "8.6 - 9.8"
                 }
               ],
               "trustBoundaryIds": [
                 "37bb0a7f-4c70-4e00-a7e5-61288db09a4e"
               ],
               "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 1,
+                "tampering": 1,
+                "informationDisclosure": 0,
                 "denialOfService": 0
               }
             },
             "labels": [
               "Payment Request"
             ],
-            "id": "ce4ef3c6-6bcd-48ad-9c74-1819e5ab7176",
+            "id": "3db1e16a-e993-475b-935a-e9029a4e9356",
             "source": {
               "cell": "57beea70-d01c-440f-a94a-ff240980bc94",
               "port": "c34c6b88-062c-456f-8c98-2b89096bc1f5"
             },
             "target": {
-              "cell": "69313df4-ebc7-4fb7-b39c-2e6ffaec012a",
-              "port": "645070a8-7640-4ca9-afa1-090d6fa4e82e"
+              "cell": "36d9e29d-8cb3-4fcf-82ac-9f60ece05bce",
+              "port": "f4cc476f-3668-4bd7-a7d2-c9cf006eae35"
             },
             "vertices": [
               {
-                "x": -700,
-                "y": 120
-              },
-              {
-                "x": -380,
+                "x": -640,
                 "y": 120
               }
             ]
@@ -1838,6 +1713,7 @@
                 }
               ],
               "trustBoundaryIds": [
+                "37bb0a7f-4c70-4e00-a7e5-61288db09a4e",
                 "ec5451fa-68cb-402b-b1ec-e7541d1e047b"
               ],
               "threatFrequency": {
@@ -1851,8 +1727,8 @@
             ],
             "id": "b11a5e76-d354-4cc5-a8d0-723ff8e322f1",
             "source": {
-              "x": -60,
-              "y": 120
+              "cell": "36d9e29d-8cb3-4fcf-82ac-9f60ece05bce",
+              "port": "6e3766eb-535c-4cea-975c-b5405562bc10"
             },
             "target": {
               "cell": "4641ece9-3b7a-4624-a1e1-5af40a48a345",
@@ -1860,19 +1736,19 @@
             },
             "vertices": [
               {
-                "x": 130,
+                "x": 30,
+                "y": 70
+              },
+              {
+                "x": 120,
                 "y": 0
               },
               {
-                "x": 160,
+                "x": 150,
                 "y": -20
               },
               {
-                "x": 190,
-                "y": -20
-              },
-              {
-                "x": 240,
+                "x": 200,
                 "y": -50
               }
             ]
@@ -2063,6 +1939,126 @@
               "port": "c2d0b6b7-d85a-4549-9bb4-8cf5c13db3ef"
             },
             "vertices": []
+          },
+          {
+            "position": {
+              "x": -260,
+              "y": 60
+            },
+            "size": {
+              "width": 120,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Payment\nGateway"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 16,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f1b28159-93f0-4c6e-8313-32547a59aa09"
+                },
+                {
+                  "group": "right",
+                  "id": "6e3766eb-535c-4cea-975c-b5405562bc10"
+                },
+                {
+                  "group": "bottom",
+                  "id": "b16fbdb2-8dd9-4686-be63-0632e1498247"
+                },
+                {
+                  "group": "left",
+                  "id": "f4cc476f-3668-4bd7-a7d2-c9cf006eae35"
+                }
+              ]
+            },
+            "id": "36d9e29d-8cb3-4fcf-82ac-9f60ece05bce",
+            "data": {
+              "type": "tm.Process",
+              "name": "Payment\nGateway",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
           }
         ],
         "description": "Data Flow Diagram untuk aplikasi pemesanan online"
@@ -2070,6 +2066,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "April Rustianto M.Kom",
-    "threatTop": 13
+    "threatTop": 14
   }
 }
