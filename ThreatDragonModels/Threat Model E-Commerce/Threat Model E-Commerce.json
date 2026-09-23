@@ -78,6 +78,7 @@
                 "4c9f86fb-9833-4a22-9096-21ed374f8cf9",
                 "e413d02d-dfb9-4296-b09c-497c36cebac9",
                 "ce4ef3c6-6bcd-48ad-9c74-1819e5ab7176",
+                "727456f0-ec7d-4c55-b5dc-11001cb6c6c5",
                 "26eeb843-6f89-41f7-9768-b789d803e987"
               ],
               "containedElements": [
@@ -113,8 +114,8 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "727456f0-ec7d-4c55-b5dc-11001cb6c6c5",
                 "c83a3efb-3e32-41bd-9e24-04df668c4ca0",
+                "727456f0-ec7d-4c55-b5dc-11001cb6c6c5",
                 "b11a5e76-d354-4cc5-a8d0-723ff8e322f1",
                 "26eeb843-6f89-41f7-9768-b789d803e987"
               ],
@@ -663,8 +664,8 @@
           },
           {
             "position": {
-              "x": -267.00000000000466,
-              "y": -120
+              "x": -260,
+              "y": -114.99999999999983
             },
             "size": {
               "width": 130,
@@ -961,8 +962,8 @@
             ],
             "id": "fb39fec8-fbd5-4192-b806-54173f1c06f8",
             "source": {
-              "x": -510,
-              "y": 50
+              "x": -540,
+              "y": 60
             },
             "target": {
               "cell": "02a5811c-c710-434b-9f74-336fd86c88e1",
@@ -970,8 +971,8 @@
             },
             "vertices": [
               {
-                "x": -330,
-                "y": 50
+                "x": -360,
+                "y": 60
               }
             ]
           },
@@ -1094,84 +1095,6 @@
               {
                 "x": -384,
                 "y": -40
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Read/Write Order",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "28a60983-f879-411b-ae7f-1788ea86471c",
-                  "title": "SQl Injection",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Information disclosure",
-                  "description": "Memodifikasi atau mencuri data pengguna dan pesanan menggunakan SQL Injection",
-                  "mitigation": "Terapkan parameterized Queries dan melakukan validasi input ",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 7,
-                  "score": "8.6 - 9.8"
-                }
-              ],
-              "trustBoundaryIds": [
-                "ec5451fa-68cb-402b-b1ec-e7541d1e047b"
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 2,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Read/Write Order"
-            ],
-            "id": "727456f0-ec7d-4c55-b5dc-11001cb6c6c5",
-            "source": {
-              "x": -140,
-              "y": -60
-            },
-            "target": {
-              "cell": "e0f7a323-0efa-4403-8c8c-48d94fbdd2c0",
-              "port": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
-            },
-            "vertices": [
-              {
-                "x": 120,
-                "y": -130
-              },
-              {
-                "x": 260,
-                "y": -180
               }
             ]
           },
@@ -1338,6 +1261,270 @@
                 "y": -220
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Read/Write Order",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "28a60983-f879-411b-ae7f-1788ea86471c",
+                  "title": "SQl Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Memodifikasi atau mencuri data pengguna dan pesanan menggunakan SQL Injection",
+                  "mitigation": "Terapkan parameterized Queries dan melakukan validasi input ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "8.6 - 9.8"
+                }
+              ],
+              "trustBoundaryIds": [
+                "37bb0a7f-4c70-4e00-a7e5-61288db09a4e",
+                "ec5451fa-68cb-402b-b1ec-e7541d1e047b"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Read/Write Order"
+            ],
+            "id": "727456f0-ec7d-4c55-b5dc-11001cb6c6c5",
+            "source": {
+              "cell": "02a5811c-c710-434b-9f74-336fd86c88e1",
+              "port": "f74777ad-e3ab-4b20-8364-9eb784d9298b"
+            },
+            "target": {
+              "cell": "e0f7a323-0efa-4403-8c8c-48d94fbdd2c0",
+              "port": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
+            },
+            "vertices": [
+              {
+                "x": 120,
+                "y": -130
+              },
+              {
+                "x": 260,
+                "y": -180
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
