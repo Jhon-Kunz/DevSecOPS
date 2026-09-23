@@ -497,14 +497,14 @@
                   "id": "c171eb0a-672f-4b21-9dbf-ac5fa11eb270",
                   "title": "Bypass Auth",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Critical",
                   "type": "Elevation of privilege",
-                  "description": "API meneruskan request Order Create ke Order Services tanpa validasi dari Auth Services",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "API meneruskan request Order Create ke Order Services tanpa validasi dari Auth Services dan merekayasa token untuk mengambil alih akun pengguna dan mengakses endpoint admin Node.js API",
+                  "mitigation": "Merapkan Rate limiting dan mengunakan algoritma kriptografi",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
-                  "score": ""
+                  "score": "8.1-9.8"
                 }
               ],
               "threatFrequency": {
@@ -513,8 +513,15 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 3
+                "elevationOfPrivilege": 4
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -531,8 +538,8 @@
                 "text": "Auth Services"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -628,12 +635,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "28a81584-421b-4996-b13b-03a56403588e",
+                  "title": "Broken Access Control",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Bypass auth JWT,Session Hijacking atu pemalsuan identitas penguna pada REST API Node.js",
+                  "mitigation": "Menrapkan RBAC di level API gateway dan multifaktor auth",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "8.1 - 9.8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             },
             "zIndex": 4
           },
@@ -1637,7 +1666,7 @@
             },
             "attrs": {
               "text": {
-                "text": ""
+                "text": "Email Service"
               },
               "body": {
                 "stroke": "#333333",
@@ -1733,7 +1762,7 @@
             "zIndex": 14,
             "data": {
               "type": "tm.Actor",
-              "name": "",
+              "name": "Email Service",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -1741,13 +1770,6 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           }
         ],
@@ -1756,6 +1778,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "April Rustianto M.Kom",
-    "threatTop": 11
+    "threatTop": 12
   }
 }
