@@ -77,8 +77,8 @@
                 "fb39fec8-fbd5-4192-b806-54173f1c06f8",
                 "4c9f86fb-9833-4a22-9096-21ed374f8cf9",
                 "e413d02d-dfb9-4296-b09c-497c36cebac9",
-                "ce4ef3c6-6bcd-48ad-9c74-1819e5ab7176",
                 "727456f0-ec7d-4c55-b5dc-11001cb6c6c5",
+                "ce4ef3c6-6bcd-48ad-9c74-1819e5ab7176",
                 "26eeb843-6f89-41f7-9768-b789d803e987"
               ],
               "containedElements": [
@@ -784,8 +784,8 @@
           },
           {
             "position": {
-              "x": -190.00000000000006,
-              "y": 70.00000000000006
+              "x": -200,
+              "y": 60
             },
             "size": {
               "width": 140,
@@ -900,6 +900,13 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1119,84 +1126,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Payment Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "80086091-dd05-40fb-a5ad-2dd2e931a336",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "Kebocoran data pembayaran pemesanan User",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 3,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "37bb0a7f-4c70-4e00-a7e5-61288db09a4e"
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Payment Request"
-            ],
-            "id": "ce4ef3c6-6bcd-48ad-9c74-1819e5ab7176",
-            "source": {
-              "x": -870,
-              "y": 0
-            },
-            "target": {
-              "cell": "69313df4-ebc7-4fb7-b39c-2e6ffaec012a",
-              "port": "645070a8-7640-4ca9-afa1-090d6fa4e82e"
-            },
-            "vertices": [
-              {
-                "x": -650,
-                "y": 130
-              },
-              {
-                "x": -330,
-                "y": 130
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Read/Write User",
               "description": "",
               "outOfScope": false,
@@ -1330,18 +1259,18 @@
               "cell": "e0f7a323-0efa-4403-8c8c-48d94fbdd2c0",
               "port": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
             },
-            "vertices": [
-              {
-                "x": 120,
-                "y": -130
-              },
-              {
-                "x": 260,
-                "y": -180
-              }
-            ],
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
                 "boundary",
                 "button-remove",
                 "vertices",
@@ -1524,7 +1453,95 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": [
+              {
+                "x": 120,
+                "y": -130
+              },
+              {
+                "x": 260,
+                "y": -180
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "80086091-dd05-40fb-a5ad-2dd2e931a336",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Kebocoran data pembayaran pemesanan User",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "37bb0a7f-4c70-4e00-a7e5-61288db09a4e"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Payment Request"
+            ],
+            "id": "ce4ef3c6-6bcd-48ad-9c74-1819e5ab7176",
+            "source": {
+              "cell": "57beea70-d01c-440f-a94a-ff240980bc94",
+              "port": "c34c6b88-062c-456f-8c98-2b89096bc1f5"
+            },
+            "target": {
+              "cell": "69313df4-ebc7-4fb7-b39c-2e6ffaec012a",
+              "port": "645070a8-7640-4ca9-afa1-090d6fa4e82e"
+            },
+            "vertices": [
+              {
+                "x": -700,
+                "y": 120
+              },
+              {
+                "x": -380,
+                "y": 120
+              }
+            ]
           },
           {
             "position": {
@@ -1981,7 +1998,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1997,24 +2015,43 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Notification",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "3621c9c7-a8cb-4313-886f-16b56cde8ebb",
+                  "title": "Notifications Flooding",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Memicu request notifikasi secara bertubi - tubi sehingga biaya API Email Service membengkak",
+                  "mitigation": "Terapkan Rate Limiting pada endpoint pemicu",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "5. 3 - 6.5"
+                }
+              ],
               "trustBoundaryIds": [
                 "37bb0a7f-4c70-4e00-a7e5-61288db09a4e",
                 "ec5451fa-68cb-402b-b1ec-e7541d1e047b"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             },
             "labels": [
-              "Data Flow"
+              "Notification"
             ],
             "id": "26eeb843-6f89-41f7-9768-b789d803e987",
             "source": {
@@ -2033,6 +2070,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "April Rustianto M.Kom",
-    "threatTop": 12
+    "threatTop": 13
   }
 }
