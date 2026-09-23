@@ -75,10 +75,10 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "fb39fec8-fbd5-4192-b806-54173f1c06f8",
-                "4c9f86fb-9833-4a22-9096-21ed374f8cf9",
                 "e413d02d-dfb9-4296-b09c-497c36cebac9",
                 "727456f0-ec7d-4c55-b5dc-11001cb6c6c5",
                 "3db1e16a-e993-475b-935a-e9029a4e9356",
+                "4c9f86fb-9833-4a22-9096-21ed374f8cf9",
                 "b11a5e76-d354-4cc5-a8d0-723ff8e322f1",
                 "26eeb843-6f89-41f7-9768-b789d803e987"
               ],
@@ -246,20 +246,27 @@
                   "id": "c8150cfc-db8c-48a2-bec4-92c8163da93c",
                   "title": "Pemalsuan data User",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Spoofing",
                   "description": "Data login User dapat dipalsukan oleh orang lain yang bukan pemilik asli dan mendapatkan hak akses tanpa izin",
-                  "mitigation": "Menyimpan session di cookies",
+                  "mitigation": "Implementasikan otentikasi berbasis JWT bertanda tangan kuat (RS256), dan Terapkan Multi-Factor Authentication (MFA) dan fitur invalidasi token saat logout atau reset password",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
-                  "score": ""
+                  "score": "8.1"
                 }
               ],
               "threatFrequency": {
-                "spoofing": 3,
+                "spoofing": 4,
                 "repudiation": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -861,74 +868,6 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTPS Login",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "639c30b0-01b7-46dc-823b-341512c33923",
-                  "title": "DDoS Attack",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Denial of service",
-                  "description": "Mengirim banyak permintaan login secara terus menerus",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 5,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "37bb0a7f-4c70-4e00-a7e5-61288db09a4e"
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 1
-              }
-            },
-            "labels": [
-              "HTTPS Login"
-            ],
-            "id": "4c9f86fb-9833-4a22-9096-21ed374f8cf9",
-            "source": {
-              "x": -857,
-              "y": -190
-            },
-            "target": {
-              "cell": "20d439cf-6e13-4488-8803-81049600e6ce",
-              "port": "645070a8-7640-4ca9-afa1-090d6fa4e82e"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
                 "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
@@ -1417,6 +1356,74 @@
                 "y": 120
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS Login",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "639c30b0-01b7-46dc-823b-341512c33923",
+                  "title": "DDoS Attack",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Mengirim banyak permintaan login secara terus menerus",
+                  "mitigation": "Mengimplementasikan global Rate Limiting, ukuran request payload, dan mitigasi DDoS (Cloudflare/WAF)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "7.5 - 8.9"
+                }
+              ],
+              "trustBoundaryIds": [
+                "37bb0a7f-4c70-4e00-a7e5-61288db09a4e"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 2
+              }
+            },
+            "labels": [
+              "HTTPS Login"
+            ],
+            "id": "4c9f86fb-9833-4a22-9096-21ed374f8cf9",
+            "source": {
+              "x": -857,
+              "y": -190
+            },
+            "target": {
+              "cell": "20d439cf-6e13-4488-8803-81049600e6ce",
+              "port": "645070a8-7640-4ca9-afa1-090d6fa4e82e"
+            }
           },
           {
             "position": {
