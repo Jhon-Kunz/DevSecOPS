@@ -51,8 +51,8 @@
           },
           {
             "position": {
-              "x": -647.0000000000047,
-              "y": -299.99999999999966
+              "x": -697.0000000000047,
+              "y": -299.9999999999995
             },
             "size": {
               "width": 890,
@@ -119,7 +119,7 @@
               "containedElements": [
                 "e0f7a323-0efa-4403-8c8c-48d94fbdd2c0",
                 "4641ece9-3b7a-4624-a1e1-5af40a48a345",
-                "499c1b64-31e4-45a4-a103-400fa60ba9c1"
+                "9276c7c1-f27f-43ed-8c30-5ad855e6c73a"
               ]
             }
           },
@@ -377,8 +377,8 @@
           },
           {
             "position": {
-              "x": -579,
-              "y": -70
+              "x": -589,
+              "y": -60
             },
             "size": {
               "width": 130,
@@ -386,7 +386,7 @@
             },
             "attrs": {
               "text": {
-                "text": "API Gateaway"
+                "text": "API Gateway"
               },
               "body": {
                 "stroke": "red",
@@ -482,7 +482,7 @@
             "zIndex": 3,
             "data": {
               "type": "tm.Process",
-              "name": "API Gateaway",
+              "name": "API Gateway",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -759,11 +759,11 @@
           },
           {
             "position": {
-              "x": -190,
-              "y": 70
+              "x": -190.00000000000006,
+              "y": 70.00000000000006
             },
             "size": {
-              "width": 130,
+              "width": 140,
               "height": 110
             },
             "attrs": {
@@ -1011,8 +1011,8 @@
             ],
             "id": "4c9f86fb-9833-4a22-9096-21ed374f8cf9",
             "source": {
-              "x": -847,
-              "y": -200
+              "x": -857,
+              "y": -190
             },
             "target": {
               "cell": "20d439cf-6e13-4488-8803-81049600e6ce",
@@ -1310,8 +1310,8 @@
                 "y": -200
               },
               {
-                "x": 290,
-                "y": -200
+                "x": 260,
+                "y": -220
               }
             ]
           },
@@ -1628,28 +1628,25 @@
           },
           {
             "position": {
-              "x": 360,
+              "x": 371.9999999999995,
               "y": -60
             },
             "size": {
-              "width": 120,
-              "height": 60
+              "width": 130,
+              "height": 80
             },
             "attrs": {
               "text": {
-                "text": "Email Service"
+                "text": ""
               },
-              "topLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              },
-              "bottomLine": {
+              "body": {
+                "stroke": "#333333",
                 "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
-            "shape": "store",
+            "shape": "actor",
             "ports": {
               "groups": {
                 "top": {
@@ -1716,38 +1713,41 @@
               "items": [
                 {
                   "group": "top",
-                  "id": "67802532-6742-4f5b-9d25-fe254569c40b"
+                  "id": "46ca244a-7e9d-4ec7-9dc2-03004ce1a2a9"
                 },
                 {
                   "group": "right",
-                  "id": "5c8fa56b-74e9-48be-ae73-d1c25fb291c5"
+                  "id": "c34c6b88-062c-456f-8c98-2b89096bc1f5"
                 },
                 {
                   "group": "bottom",
-                  "id": "47803065-2c6f-48cd-be75-3d9367ebcc04"
+                  "id": "0533c8ee-ceea-4bdc-92fa-cf8404f34e88"
                 },
                 {
                   "group": "left",
-                  "id": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
+                  "id": "c2d0b6b7-d85a-4549-9bb4-8cf5c13db3ef"
                 }
               ]
             },
-            "id": "499c1b64-31e4-45a4-a103-400fa60ba9c1",
+            "id": "9276c7c1-f27f-43ed-8c30-5ad855e6c73a",
             "zIndex": 14,
             "data": {
-              "type": "tm.Store",
-              "name": "Email Service",
+              "type": "tm.Actor",
+              "name": "",
               "description": "",
-              "outOfScope": false,
               "isTrustBoundary": false,
+              "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isALog": false,
-              "isEncrypted": false,
-              "isSigned": false,
-              "storesCredentials": false,
-              "storesInventory": false,
+              "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           }
         ],
@@ -1756,6 +1756,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "April Rustianto M.Kom",
-    "threatTop": 9
+    "threatTop": 11
   }
 }
