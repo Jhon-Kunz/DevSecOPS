@@ -51,8 +51,8 @@
           },
           {
             "position": {
-              "x": -697.0000000000047,
-              "y": -299.9999999999995
+              "x": -699,
+              "y": -315
             },
             "size": {
               "width": 890,
@@ -89,8 +89,8 @@
           },
           {
             "position": {
-              "x": 296.9999999999995,
-              "y": -299.9999999999995
+              "x": 310,
+              "y": -299.99999999999966
             },
             "size": {
               "width": 280,
@@ -121,6 +121,13 @@
                 "4641ece9-3b7a-4624-a1e1-5af40a48a345",
                 "9276c7c1-f27f-43ed-8c30-5ad855e6c73a"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -515,13 +522,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 4
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1136,16 +1136,16 @@
               "threats": [
                 {
                   "id": "28a60983-f879-411b-ae7f-1788ea86471c",
-                  "title": "New STRIDE threat",
+                  "title": "SQl Injection",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Critical",
                   "type": "Information disclosure",
                   "description": "Memodifikasi atau mencuri data pengguna dan pesanan menggunakan SQL Injection",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Terapkan parameterized Queries dan melakukan validasi input ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 7,
-                  "score": ""
+                  "score": "8.6 - 9.8"
                 }
               ],
               "trustBoundaryIds": [
@@ -1153,7 +1153,7 @@
               ],
               "threatFrequency": {
                 "tampering": 1,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -1170,10 +1170,6 @@
               "port": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
             },
             "vertices": [
-              {
-                "x": 50,
-                "y": -110
-              },
               {
                 "x": 120,
                 "y": -130
@@ -1298,14 +1294,14 @@
                   "id": "f07901a8-fd5e-4326-8413-72b0f7c56e48",
                   "title": "New STRIDE threat",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Information disclosure",
                   "description": "Mencuri data pengguna tanpa izin menggunakan SQL Injection",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Terapkan parameterized Queries dan melakukan validasi input ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
-                  "score": ""
+                  "score": "8.6 - 9.8"
                 }
               ],
               "trustBoundaryIds": [
@@ -1313,7 +1309,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -1336,6 +1332,10 @@
               },
               {
                 "x": -10,
+                "y": -200
+              },
+              {
+                "x": 80,
                 "y": -200
               },
               {
