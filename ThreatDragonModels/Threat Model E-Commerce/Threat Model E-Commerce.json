@@ -89,12 +89,12 @@
           },
           {
             "position": {
-              "x": 296.9999999999998,
-              "y": -299.9999999999998
+              "x": 296.9999999999995,
+              "y": -299.9999999999995
             },
             "size": {
               "width": 280,
-              "height": 250
+              "height": 340
             },
             "attrs": {
               "label": {
@@ -112,13 +112,14 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "c83a3efb-3e32-41bd-9e24-04df668c4ca0",
                 "727456f0-ec7d-4c55-b5dc-11001cb6c6c5",
+                "c83a3efb-3e32-41bd-9e24-04df668c4ca0",
                 "b11a5e76-d354-4cc5-a8d0-723ff8e322f1"
               ],
               "containedElements": [
                 "e0f7a323-0efa-4403-8c8c-48d94fbdd2c0",
-                "4641ece9-3b7a-4624-a1e1-5af40a48a345"
+                "4641ece9-3b7a-4624-a1e1-5af40a48a345",
+                "499c1b64-31e4-45a4-a103-400fa60ba9c1"
               ]
             }
           },
@@ -1076,55 +1077,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Read/Write User",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "ec5451fa-68cb-402b-b1ec-e7541d1e047b"
-              ]
-            },
-            "labels": [
-              "Read/Write User"
-            ],
-            "id": "c83a3efb-3e32-41bd-9e24-04df668c4ca0",
-            "source": {
-              "x": -320,
-              "y": -180
-            },
-            "target": {
-              "cell": "e0f7a323-0efa-4403-8c8c-48d94fbdd2c0",
-              "port": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1145,15 +1099,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "28a60983-f879-411b-ae7f-1788ea86471c",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Memodifikasi atau mencuri data pengguna dan pesanan menggunakan SQL Injection",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "ec5451fa-68cb-402b-b1ec-e7541d1e047b"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Read/Write Order"
@@ -1166,7 +1139,21 @@
             "target": {
               "cell": "e0f7a323-0efa-4403-8c8c-48d94fbdd2c0",
               "port": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
-            }
+            },
+            "vertices": [
+              {
+                "x": 50,
+                "y": -110
+              },
+              {
+                "x": 120,
+                "y": -130
+              },
+              {
+                "x": 260,
+                "y": -180
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1245,6 +1232,98 @@
                 "y": 130
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Read/Write User",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "f07901a8-fd5e-4326-8413-72b0f7c56e48",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Mencuri data pengguna tanpa izin menggunakan SQL Injection",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "ec5451fa-68cb-402b-b1ec-e7541d1e047b"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Read/Write User"
+            ],
+            "id": "c83a3efb-3e32-41bd-9e24-04df668c4ca0",
+            "source": {
+              "x": -320,
+              "y": -180
+            },
+            "target": {
+              "cell": "e0f7a323-0efa-4403-8c8c-48d94fbdd2c0",
+              "port": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
+            },
+            "vertices": [
+              {
+                "x": -180,
+                "y": -180
+              },
+              {
+                "x": -10,
+                "y": -200
+              },
+              {
+                "x": 290,
+                "y": -200
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
@@ -1541,6 +1620,130 @@
               "cell": "4641ece9-3b7a-4624-a1e1-5af40a48a345",
               "port": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
             }
+          },
+          {
+            "position": {
+              "x": 360,
+              "y": -60
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Email Service"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "67802532-6742-4f5b-9d25-fe254569c40b"
+                },
+                {
+                  "group": "right",
+                  "id": "5c8fa56b-74e9-48be-ae73-d1c25fb291c5"
+                },
+                {
+                  "group": "bottom",
+                  "id": "47803065-2c6f-48cd-be75-3d9367ebcc04"
+                },
+                {
+                  "group": "left",
+                  "id": "6b4b8316-a9bd-469a-a0fb-a2cf6957faca"
+                }
+              ]
+            },
+            "id": "499c1b64-31e4-45a4-a103-400fa60ba9c1",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Store",
+              "name": "Email Service",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
           }
         ],
         "description": "Data Flow Diagram untuk aplikasi pemesanan online"
@@ -1548,6 +1751,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "April Rustianto M.Kom",
-    "threatTop": 6
+    "threatTop": 8
   }
 }
